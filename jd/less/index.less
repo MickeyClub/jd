@@ -1,0 +1,259 @@
+// 引入base.less公共样式文件
+
+@import 'base.less';
+
+// 设置京东首页的body宽度最大为640px
+
+body{
+    background: #fff;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+    // background: #ccc;
+    // height: 2000px;
+}
+
+// #header{
+//     display: flex;
+//     border-color: rgba(0, 0, 0, 0);
+//     position: fixed;
+//     width: 100%;
+//     z-index: 2;
+//     // 兼容pc 需要设置兼容
+//     max-width: 640px;
+//     .icon-logo{
+//         display: block;
+//         width: 80px;
+//         height: 30px;
+//         margin-top: 8px;
+//         // background-image: url('../images/sprites.png');
+//         // // 图片本身是400*400,要缩小一半为200*200
+//         // background-size: 200px 200px;
+//         // background-position-y: -108px;
+//         // less里特效是符号需要转移 如/  用 ~'/' 转义
+//         background: url(../images/sprites.png) 0 -108px ~'/' 200px 200px;
+
+//         padding-left: 20px;
+//         // 修改背景图的定位位置,从内容区域开始定位,让padding生效
+//         background-origin: content-box;
+//         // 背景图裁切
+//         background-clip: content-box;
+//     }
+//     .search-form{
+//         flex: 1;
+//         padding-top: 5px;
+//         position: relative;
+//         .icon-search{
+//             width: 20px;
+//             height: 20px;
+//             position: absolute;
+//             left: 5px;
+//             top: 8px;
+//              background-image: url(../images/sprites.png);
+//              background-size: 200px 200px;
+//              background-position: -60px -108px;
+//         }
+//         >input{
+//             width: 100%;
+//             height: 30px;
+//             border-radius: 15px;
+//             padding-left: 30px;
+//         }
+//     }
+//     .login{
+//         display: block;
+//         width: 50px;
+//         height: 35px;
+//         line-height: 35px;
+//         margin-left: 8px;
+//         color: #fff;
+//     }
+// }
+
+
+#slide{
+    img{
+        width: 100%;
+    }
+    // .swiper-pa
+}
+
+#nav{
+    padding: 10px;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li{
+            // margin: 0 auto;
+            text-align: center;
+            width: 25%;
+            >a{
+                
+                >img{
+                    width: 40px;
+                    height: 40px;
+                }
+                >p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+#main{
+    padding: 10px;
+    // background-color: #ccc;
+    padding-bottom: 60px;
+}
+
+// 秒杀
+#seckill{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    // 秒杀标题
+    .seckill-title{
+        height: 30px;
+        line-height: 30px;
+        .seckill-icon{
+            width: 20px;
+            height: 25px;
+            float: left;
+            margin-left: 5px;
+        }
+        .seckill-name{
+            margin-left: 5px;
+            font-size: 14px;
+            color: @main-color;
+            float: left;
+        }
+        .seckill-time{
+            margin-left: 5px;
+            float: left;
+            line-height: 30px;
+            span{
+                background-color: #000;
+                color: #fff;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                display: inline-block;
+                text-align: center;
+                &:nth-child(3n){
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+        .seckill-more{
+            float: right;
+        }
+    }
+    // 秒杀内容
+    .seckill-content{
+        >ul{
+            display: flex;
+            >li{
+                text-align: center;
+                flex: 1;
+                border-right: 1px solid #ccc;
+                &:last-of-type{
+                    border: none;
+                }
+                >a{
+                    display: block;
+                    >img{
+                        width: 110px;
+                    }
+                    p{
+                        font-size: 14px;
+                        text-align: center;
+                        // 
+                        &:first-of-type{
+                            color: @main-color;
+                        }
+                        &::last-of-type{
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 超市
+.jd-market{
+    background-color: #fff;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    .jd-market-title{
+        border-bottom: 1px solid #ccc;
+        >h4{
+            height: 30px;
+            line-height: 30px;
+            padding-left: 30px;
+            font-weight: normal;
+            position: relative;
+            &:before{
+                content: "";
+                width: 4px;
+                height: 15px;
+                background-color: @main-color;
+                position: absolute;
+                top: 8px;
+                left: 20px;
+            }
+        }
+    }
+    .jd-market-content{
+        display: flex;
+        .left{
+            flex: 1;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+// // 底部
+// #footer{
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+//     max-width: 640px;
+//     background-color: #fff;
+//     >ul{
+//         display: flex;
+//         >li{
+//             flex: 1;
+//             >a{
+//                 text-align: center;
+//                 display: block;
+//                 >img{
+//                     width: 65px;
+//                     height: 50px;
+
+//                 }
+//             }
+//         }
+//     }
+// }
